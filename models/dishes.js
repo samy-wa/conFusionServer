@@ -55,6 +55,10 @@ const dishSchema = new Schema({
         type: Boolean,
         default: false
     },
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
     comments: [comentSchema]
 },
     {
